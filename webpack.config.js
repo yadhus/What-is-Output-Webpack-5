@@ -10,9 +10,14 @@ module.exports = {
   //   vendor: "./src/vendor.js",
   // },
   output: {
+    filename: "[name].[contenthash].js",
+    path: path.resolve(__dirname, "build"),
+    pathinfo: true,
     chunkFilename: "[name].[contenthash:8].chunk.js",
+    publicPath: "/assets/",
+    globalObject: "this",
     // default webpack configuration - no need to mention unless if you need to change it
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    // filename: "[name].js",
+    // path: path.resolve(__dirname, "dist"),
   },
 };
